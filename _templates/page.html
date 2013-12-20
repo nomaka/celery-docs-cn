@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="deck">
+
+    {% if version == "3.2" or version == "4.0" %}
+        <p class="developmentversion">
+        你正在阅读 Celery 开发版本的文档，可能与之前的正式版有很大区别。
+        老版本文档见：
+
+        <a href="http://docs.celeryproject.org/en/latest/{{ pagename }}{{ file_suffix }}">3.0</a>.
+        </p>
+        {% else %}
+        <p>
+        你正在阅读 Celery {{ version }} 的文档。开发版本文档见：
+        <a href="http://docs.celeryproject.org/en/master/{{ pagename }}{{ file_suffix }}">此处</a>.
+        </p>
+    {% endif %}
+
+</div>
+    {{ body }}
+{% endblock %}
