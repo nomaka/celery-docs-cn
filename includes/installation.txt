@@ -62,13 +62,13 @@ Celery 也定义了一组用于安装 Celery 和给定特性依赖的捆绑。
     使用 librabbitmq 的 C 库.
 
 :celery[redis]:
-    使用 Redis 作为消息传输或结果后端。
+    使用 Redis 作为消息传输方式或结果后端。
 
 :celery[mongodb]:
-    使用 MongoDB 作为消息传输（ *实验性* ），或是结果后端（ *已支持* ）。
+    使用 MongoDB 作为消息传输方式（ *实验性* ），或是结果后端（ *已支持* ）。
 
 :celery[sqs]:
-    使用 Amazon SQS 作为消息传输（ *实验性* ）。
+    使用 Amazon SQS 作为消息传输方式（ *实验性* ）。
 
 :celery[memcache]:
     使用 memcache 作为结果后端。
@@ -77,28 +77,28 @@ Celery 也定义了一组用于安装 Celery 和给定特性依赖的捆绑。
     使用 Apache Cassandra 作为结果后端。
 
 :celery[couchdb]:
-    使用 CouchDB 作为消息传输（ *实验性* ）。
+    使用 CouchDB 作为消息传输方式（ *实验性* ）。
 
 :celery[couchbase]:
     使用 CouchBase 作为结果后端。
 
 :celery[beanstalk]:
-    使用 Beanstalk 作为消息传输（ *实验性* ）。
+    使用 Beanstalk 作为消息传输方式（ *实验性* ）。
 
 :celery[zookeeper]:
-    使用 Zookeeper 作为消息传输。
+    使用 Zookeeper 作为消息传输方式。
 
 :celery[zeromq]:
-    使用 ZeroMQ 作为消息传输（ *实验性* ）。
+    使用 ZeroMQ 作为消息传输方式（ *实验性* ）。
 
 :celery[sqlalchemy]:
-    使用 SQLAlchemy 作为消息传输（ *实验性* ），或作为结果后端（ *已支持* ）。
+    使用 SQLAlchemy 作为消息传输方式（ *实验性* ），或作为结果后端（ *已支持* ）。
 
 :celery[pyro]:
-    使用 Pyro4 消息传输（ *实验性* ）。
+    使用 Pyro4 消息传输方式（ *实验性* ）。
 
 :celery[slmq]:
-    使用  SoftLayer Message Queue 传输（ *实验性* ）。
+    使用 SoftLayer Message Queue 传输（ *实验性* ）。
 
 .. _celery-installing-from-source:
 
