@@ -16,10 +16,10 @@ Celery 简介
 消息队列的输入是工作的一个单元，称为任务，独立的职程（Worker）进程持续
 监视队列中是否有需要处理的新任务。
 
-Celery 用消息通信，通常使用中间人（Broker）在客户端和职程间斡旋。这个过程
-从客户端向队列添加消息开始，之后中间人把消息派送给职程。
+Celery 用消息通信，通常使用代理（Broker）在客户端和职程间斡旋。这个过程
+从客户端向队列添加消息开始，之后代理把消息派送给职程。
 
-Celery 系统可包含多个职程和中间人，以此获得高可用性和横向扩展能力。
+Celery 系统可包含多个职程和代理，以此获得高可用性和横向扩展能力。
 
 Celery 是用 Python 编写的，但协议可以用任何语言实现。迄今，已有 Ruby 实现
 的 RCelery_ 、node.js 实现的 node-celery_ 以及一个 `PHP 客户端`_ ，语言
@@ -44,7 +44,7 @@ Celery 是用 Python 编写的，但协议可以用任何语言实现。迄今�
     Python 2.6 或更新版本的 Python。最后一个支持 Python 2.4
     的版本为 Celery 2.2 系列。
 
-*Celery* 需要一个发送和接受消息的传输者。RabbitMQ 和 Redis 中间人
+*Celery* 需要一个发送和接受消息的传输者。RabbitMQ 和 Redis 代理
 的消息传输支持所有特性，但也提供大量其他实验性方案的支持，包括
 用 SQLite 进行本地开发。
 
@@ -88,7 +88,7 @@ Celery 是…
 
     - **高可用性**
 
-        倘若连接丢失或失败，职程和客户端会自动重试，并且一些中间人
+        倘若连接丢失或失败，职程和客户端会自动重试，并且一些代理
         通过 *主/主* 或 *主/从* 方式复制来提高可用性。
 
     - **快速**
@@ -100,7 +100,7 @@ Celery 是…
 
         *Celery* 几乎所有部分都可以扩展或单独使用。可以自制连接池、
         序列化、压缩模式、日志、调度器、消费者、生产者、自动扩展、
-        中间人传输或更多。
+        代理传输或更多。
 
 
 .. topic:: 它支持
@@ -108,7 +108,7 @@ Celery 是…
     .. hlist::
         :columns: 2
 
-        - **中间人**
+        - **代理**
 
             - :ref:`RabbitMQ <broker-rabbitmq>`, :ref:`Redis <broker-redis>`,
             - :ref:`MongoDB <broker-mongodb>` （实验性）, ZeroMQ （实验性）
@@ -263,7 +263,7 @@ Celery 易于与 Web 框架集成，其中的一些甚至已经有了集成包�
         - :ref:`清空消息 <monitoring-control>`
         - :ref:`检视职程的工作状况 <monitoring-control>`
         - :ref:`查看职程上注册的任务 <monitoring-control>`
-        - :ref:`迁移任务到新中间人 <monitoring-control>`
+        - :ref:`迁移任务到新代理 <monitoring-control>`
         - :ref:`事件消息类型列表 <event-reference>`
         - :ref:`为 Celery 做贡献 <contributing>`
         - :ref:`配置设定的可用字段 <configuration>`
@@ -277,7 +277,7 @@ Celery 易于与 Web 框架集成，其中的一些甚至已经有了集成包�
     .. hlist::
         :columns: 4
 
-        - :ref:`中间人 <brokers>`
+        - :ref:`代理 <brokers>`
         - :ref:`应用 <guide-app>`
         - :ref:`任务 <guide-tasks>`
         - :ref:`调用 <guide-calling>`
